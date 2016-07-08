@@ -42,7 +42,7 @@ There are a number of questions to answer about a modern successor to CoffeeScri
 ... and surely many more. Kindly [open an issue](https://github.com/coffeescript6/discuss/issues/new) to open a discussion on any of the above, or similar, topics!
 
 
-### The name
+## The name
 Given that this project has no official blessing from @jashkenas and co – and may never receive it – the name "CoffeeScript 6.0" should be thought of as a placeholder. 
 
 
