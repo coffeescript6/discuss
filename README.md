@@ -47,6 +47,8 @@ Given that this project has no official blessing from @jashkenas and co – and 
 
 
 ## Possible Alternatives
+There are a number of interesting new languages that have sprung up, some of them listed below. None seem to capture the essence of "unfancy JavaScript" accomplished in CoffeeScript, but may be sources of inspiration nonetheless:
+
 - [LiveScript](http://livescript.net/) – Extremely feature-rich, closest to CoffeeScript I've seen, functional-oriented
 - [Earl Grey](http://www.earl-grey.io/) – Python-ish with macros
 - [PureScript](http://www.purescript.org/) – Haskell-based, recommended by @michaelficarra (author of CoffeeScriptRedux)
