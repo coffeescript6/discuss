@@ -28,8 +28,8 @@ Examples of unacceptable behavior by participants include:
 * Public or private harassment
 * Publishing others' private information, such as a physical or electronic
   address, without explicit permission
-* Other conduct which could reasonably be considered inappropriate in a
-  professional setting
+* Other conduct which could reasonably be considered inappropriate in a public
+* setting with the interest of working on common goals
 
 ## Our Responsibilities
 
@@ -43,6 +43,9 @@ that are not aligned to this Code of Conduct, or to ban temporarily or
 permanently any contributor for other behaviors that they deem inappropriate,
 threatening, offensive, or harmful.
 
+Any such action must be accompanied by a public notice declaring that such an
+action was taken and explaining why.
+
 ## Scope
 
 This Code of Conduct applies both within project spaces and in public spaces
@@ -55,12 +58,13 @@ further defined and clarified by project maintainers.
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported by contacting the project team at <WE NEED TO INSERT A CENTRAL MAIL
-ADDRESS HERE>. All complaints will be reviewed and investigated and will result
-in a response that is deemed necessary and appropriate to the circumstances. The
-project team is obligated to maintain confidentiality with regard to the
-reporter of an incident. Further details of specific enforcement policies may be
-posted separately.
+reported by contacting the project team at
+[coffeescript6-abuse-report@mailinator.com](mailto:coffeescript6-abuse-report@mailinator.com).
+All complaints will be reviewed and investigated and will result in a response
+that is deemed necessary and appropriate to the circumstances. The project team
+is obligated to maintain confidentiality with regard to the reporter of an
+incident. Further details of specific enforcement policies may be posted
+separately.
 
 Project maintainers who do not follow or enforce the Code of Conduct in good
 faith may face temporary or permanent repercussions as determined by other
