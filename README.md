@@ -1,6 +1,26 @@
 # CoffeeScript 6.0
 *CoffeeScript is dead – long live CoffeeScript!*
+```
+                                              ,--.
+                                             /  .'
+                                            .  / -.
+        _____       __  __                  | .-.  '
+      / ____|     / _|/ _|                  ' \  |  |
+     | |     ___ | |_| |_ ___  ___     .-`` \  `'  / '-.
+     | |    / _ \|  _|  _/ _ \/ _ \   (      `----'     )
+     | |___| (_) | | | ||  __/  __/   |`-..________ ..-'|
+      \_____\___/|_| |_| \___|\___|   |                 |
+                                      |                 ;--.
+       _____           _       _      |                (__  \
+      / ____|         (_)     | |     |                 | )  )
+     | (___   ___ _ __ _ _ __ | |_    |                 |/  /
+     \___ \ / __| '__| | '_ \| __|    |                 (  /
+     ____) | (__| |  | | |_) | |_     |                 |/
+    |_____/ \___|_|  |_| .__/ \__|    |                 |
+                       | |             `-.._________..-'
+                       |_|
 
+```
 This repo intends to serve as a place to discuss a new, community-driven CoffeeScript built on ES6+. 
 
 [Open an issue](https://github.com/coffeescript6/discuss/issues/new) to propose an idea or raise a question!
