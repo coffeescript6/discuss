@@ -11,7 +11,7 @@ You can also drop by this [Gitter Chatroom](https://gitter.im/csnext/Lobby).
 
 We are splitting this effort into two parts: 
 
-1. PR's to [jashkenas/coffeescript](http://github.com/jashkenas/coffeescript) to provide support for ES6 classes and modules (aka `import`/`export`) – e.g.; [this work](https://github.com/jashkenas/coffeescript/compare/master...GeoffreyBooth:import-export?expand=1).
+1. PR's to [jashkenas/coffeescript](http://github.com/jashkenas/coffeescript) to provide support for ES6 classes and modules (aka `import`/`export`) – e.g.; [this work](https://github.com/jashkenas/coffeescript/compare/master...GeoffreyBooth:import-export?expand=1). `async`/`await` and `const` may be worth adding as well. 
 2. Separate repo's, optionally under this github organization, for efforts to modernize CoffeeScript – be it through a fork of jashkenas/coffeescript, a fork of coffeescriptredux, or a new codebase entirely. 
 
 If you would like to propose/lead an effort with a broader suite of changes than can be handled with individual PR's to jashkenas/coffeescript, and are interested in the benefits of a `coffeescript6` organization and community, please:
