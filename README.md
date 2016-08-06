@@ -37,27 +37,6 @@ One clear goal of CS6 would be adoption of ES6+ features, either overwriting Cof
 A possible second goal would be to take this opportunity to rethink certain aspects of CoffeeScript. This might include new features that push the JavaScript ecosystem forward, modified syntax to help CS6 be more welcoming to newcomers, and the removal from (or modification of) less-useful/confusing features.
 
 
-## Open Questions
-
-There are a number of questions to answer about a modern successor to CoffeeScript, such as: 
-
-- ES6 Compatibility
-  - How to handle...
-  - let/const/var?
-  - async/await? 
-  - getters/setters? 
-  - static properties, methods, etc?
-  - for in/for of?
-  - decorators (and their possible clash with @properties)?
-- Should types (eg; via Flow) be supported? If so, how?
-- What should the compiler look like? 
-- What level of backwards-compatibility with CoffeeScript should be targeted?
-- Should new features be added? Which ones? What should the bar for new features be?
-- What are the biggest warts in CoffeeScript that ought to be removed or patched?
-
-... and surely many more. Kindly [open an issue](https://github.com/coffeescript6/discuss/issues/new) to open a discussion on any of the above, or similar, topics!
-
-
 ## The name
 Given that this project has no official blessing from @jashkenas and co – and may never receive it – the name "CoffeeScript 6.0" should be thought of as a placeholder. 
 
