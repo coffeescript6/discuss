@@ -1,31 +1,26 @@
 # CoffeeScript 6.0
 *CoffeeScript is dead – long live CoffeeScript!*
-```
-                                              ,--.
-                                             /  .'
-                                            .  / -.
-        _____       __  __                  | .-.  '
-      / ____|     / _|/ _|                  ' \  |  |
-     | |     ___ | |_| |_ ___  ___     .-`` \  `'  / '-.
-     | |    / _ \|  _|  _/ _ \/ _ \   (      `----'     )
-     | |___| (_) | | | ||  __/  __/   |`-..________ ..-'|
-      \_____\___/|_| |_| \___|\___|   |                 |
-                                      |                 ;--.
-       _____           _       _      |                (__  \
-      / ____|         (_)     | |     |                 | )  )
-     | (___   ___ _ __ _ _ __ | |_    |                 |/  /
-     \___ \ / __| '__| | '_ \| __|    |                 (  /
-     ____) | (__| |  | | |_) | |_     |                 |/
-    |_____/ \___|_|  |_| .__/ \__|    |                 |
-                       | |             `-.._________..-'
-                       |_|
 
-```
 This repo intends to serve as a place to discuss a new, community-driven CoffeeScript built on ES6+. 
 
 [Open an issue](https://github.com/coffeescript6/discuss/issues/new) to propose an idea or raise a question!
 
 You can also drop by this [Gitter Chatroom](https://gitter.im/csnext/Lobby).
+
+## Project Direction
+
+We are splitting this effort into two parts: 
+
+1. PR's to [jashkenas/coffeescript](http://github.com/jashkenas/coffeescript) to provide support for ES6 classes and modules (aka `import`/`export`) – e.g.; [this work](https://github.com/jashkenas/coffeescript/compare/master...GeoffreyBooth:import-export?expand=1).
+2. Separate repo's, optionally under this github organization, for efforts to modernize CoffeeScript – be it through a fork of jashkenas/coffeescript, a fork of coffeescriptredux, or a new codebase entirely. 
+
+If you would like to propose/lead an effort with a broader suite of changes than can be handled with individual PR's to jashkenas/coffeescript, and are interested in the benefits of a `coffeescript6` organization and community, please:
+
+1. Submit a PR adding a markdown file to the `proposals` dir on this repo, describing your vision.
+2. We will create a repo under this organization for you, and link to it from this readme.
+3. You may use this `discuss` repo and the gitter chatroom for discussion. 
+
+If a clear leader emerges, the hope is that we'll all rally around that.
 
 ## Background
 
