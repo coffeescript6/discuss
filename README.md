@@ -1,31 +1,26 @@
 # CoffeeScript 6.0
 *CoffeeScript is dead – long live CoffeeScript!*
-```
-                                              ,--.
-                                             /  .'
-                                            .  / -.
-        _____       __  __                  | .-.  '
-      / ____|     / _|/ _|                  ' \  |  |
-     | |     ___ | |_| |_ ___  ___     .-`` \  `'  / '-.
-     | |    / _ \|  _|  _/ _ \/ _ \   (      `----'     )
-     | |___| (_) | | | ||  __/  __/   |`-..________ ..-'|
-      \_____\___/|_| |_| \___|\___|   |                 |
-                                      |                 ;--.
-       _____           _       _      |                (__  \
-      / ____|         (_)     | |     |                 | )  )
-     | (___   ___ _ __ _ _ __ | |_    |                 |/  /
-     \___ \ / __| '__| | '_ \| __|    |                 (  /
-     ____) | (__| |  | | |_) | |_     |                 |/
-    |_____/ \___|_|  |_| .__/ \__|    |                 |
-                       | |             `-.._________..-'
-                       |_|
 
-```
 This repo intends to serve as a place to discuss a new, community-driven CoffeeScript built on ES6+. 
 
 [Open an issue](https://github.com/coffeescript6/discuss/issues/new) to propose an idea or raise a question!
 
 You can also drop by this [Gitter Chatroom](https://gitter.im/csnext/Lobby).
+
+## Project Direction
+
+We are splitting this effort into two parts: 
+
+1. PR's to [jashkenas/coffeescript](http://github.com/jashkenas/coffeescript) to provide support for ES6 classes and modules (aka `import`/`export`) – e.g.; [this work](https://github.com/jashkenas/coffeescript/compare/master...GeoffreyBooth:import-export?expand=1). `async`/`await` and `const` may be worth adding as well. 
+2. Separate repo's, optionally under this github organization, for efforts to modernize CoffeeScript – be it through a fork of jashkenas/coffeescript, a fork of coffeescriptredux, or a new codebase entirely. 
+
+If you would like to propose/lead an effort with a broader suite of changes than can be handled with individual PR's to jashkenas/coffeescript, and are interested in the benefits of a `coffeescript6` organization and community, please:
+
+1. Submit a PR adding a markdown file to the `proposals` dir on this repo, describing your vision.
+2. We will create a repo under this organization for you, and link to it from this readme.
+3. You may use this `discuss` repo and the gitter chatroom for discussion. 
+
+If a clear leader emerges, the hope is that we'll all rally around that.
 
 ## Background
 
@@ -40,27 +35,6 @@ Frankly, the leadership of CoffeeScript seems (understandably) burnt-out. Rather
 One clear goal of CS6 would be adoption of ES6+ features, either overwriting CoffeeScript features or adding new ones where missing. 
 
 A possible second goal would be to take this opportunity to rethink certain aspects of CoffeeScript. This might include new features that push the JavaScript ecosystem forward, modified syntax to help CS6 be more welcoming to newcomers, and the removal from (or modification of) less-useful/confusing features.
-
-
-## Open Questions
-
-There are a number of questions to answer about a modern successor to CoffeeScript, such as: 
-
-- ES6 Compatibility
-  - How to handle...
-  - let/const/var?
-  - async/await? 
-  - getters/setters? 
-  - static properties, methods, etc?
-  - for in/for of?
-  - decorators (and their possible clash with @properties)?
-- Should types (eg; via Flow) be supported? If so, how?
-- What should the compiler look like? 
-- What level of backwards-compatibility with CoffeeScript should be targeted?
-- Should new features be added? Which ones? What should the bar for new features be?
-- What are the biggest warts in CoffeeScript that ought to be removed or patched?
-
-... and surely many more. Kindly [open an issue](https://github.com/coffeescript6/discuss/issues/new) to open a discussion on any of the above, or similar, topics!
 
 
 ## The name
