@@ -25,6 +25,7 @@ This repo intends to serve as a place to discuss a new, community-driven CoffeeS
 
 [Open an issue](https://github.com/coffeescript6/discuss/issues/new) to propose an idea or raise a question!
 
+You can also drop by this [Gitter Chatroom](https://gitter.im/csnext/Lobby).
 
 ## Background
 
