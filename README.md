@@ -75,37 +75,11 @@ CoffeeScript is hemorrhaging marketshare the longer that incompatibilities with 
 
 ### Developer Happiness: Supporting Optional ES2015+ Features
 
-Features that developers enjoy in ES2015 that are appropriate to implement in CoffeeScript, like `const`, should be implemented as time permits. These features should be implemented in a new compiler, assuming we build one; and possibly also in the old compiler too if such an implementation is easy and doesn’t break backward compatibility. Any feature implemented in both compilers should have identical syntax.
+Features that developers enjoy in ES2015 that are appropriate to implement in CoffeeScript, like `const`, should be implemented as time permits. These features should be implemented in a new compiler, assuming we build one; and possibly also in the old compiler too if such an implementation is easy and doesn’t break backward compatibility. Any feature implemented in both compilers should have identical syntax. See [technical discussion of how to implement a new compiler here](./COMPILER.md).
 
 ### Modernizing Output
 
 Lastly, CoffeeScript’s output should be modernized as much as possible. Fat arrows should output as fat arrows, destructuring should output as destructuring, etc. But this should be the **last priority**—it makes our source code cleaner, and debugging eventually easier when ES2015 features are supported natively in runtimes, but otherwise ES2015 output has little benefit for developers. That said, *new* features, especially ES2015+ ones, should definitely be output as ES2015+ code.
-
-## A New Compiler
-
-The current CoffeeScript 1.x compiler is extremely well commented, but it really needs those comments. Understanding it will bend your brain into knots. The original goal of [CoffeeScript Redux](https://github.com/michaelficarra/CoffeeScriptRedux) was to refactor CoffeeScript’s codebase, not to add new features.
-
-Don’t underestimate how hard it is to write your own language compiler. If it were easy, CoffeeScript Redux would have been finished; as it stands, that project was essentially abandoned a year ago.
-
-Also don’t underestimate how hard it is to add new features to the CoffeeScript 1.x compiler. If that were easy, someone else would’ve added modules and classes to it by now.
-
-The CoffeeScript community suffers from too many people with a lot of passion but little time to invest in development. For that reason, we consider a new-from-scratch compiler to be off the table. We’ll just end up with another Redux.
-
-So we have only two options for starting points for our new compiler:
-
-* The current CoffeeScript 1.x compiler.
-	* Pros: already supports all existing CoffeeScript code.
-	* Cons: complicated, difficult-to-understand codebase.
-* The CoffeeScript Redux compiler, probably from [this PR](https://github.com/michaelficarra/CoffeeScriptRedux/pull/344).
-	* Pros: better codebase, and the PR already supports many ES2015 features.
-	* Cons: we inherit Redux’s issues and unfinished work, including any incompatibilities with existing CoffeeScript code.
-
-We have until modules and classes are supported in the current compiler before we need to [choose which compiler to use as a starting point for the next phase](https://github.com/coffeescript6/discuss/issues/25).
-
-As to where we should put our new compiler and develop it, here are two ideas: 
-
-* Inside the current main [coffee-script repo](https://github.com/jashkenas/coffeescript), especially if we’re updating the old compiler. Currently the repo is structured such that the code in `src` is compiled and output into `lib/coffee-script`. If we want to avoid merge conflicts with any pending PRs against the repo, we should leave those folders as they are. But we could add new folders, for example `source` and `lib/coffeescript`, that contain the new compiler source code and compiled output. A flag like `output: 'modern'` would cause the new compiler (i.e. the code in `lib/coffeescript`) to be used instead of the old one. Both compilers, modern and legacy, would live on in the same repo. Bugfixes and improvements could be submitted against either.
-* In a new “coffeescript” repo, inside the [coffeescript organization](https://github.com/coffeescript). We should claim the `coffeescript` name on NPM, and point it to a new repo at [https://github.com/coffeescript/coffeescript](https://github.com/coffeescript/coffeescript). This new repo would either be a fork of the original CoffeeScript repo or a migration of the CoffeeScript Redux repo (in order to preserve the old repo’s history of issues and pull requests). No opt-in flag would be necessary; by doing `npm install coffeescript` instead of `npm install coffee-script`, developers would be choosing this compiler (though we would need some way to warn them in case they intended to choose `coffee-script`).
 
 ## Name
 
@@ -118,12 +92,3 @@ There’s no need for something fancy or new. We already have considerable recog
 Besides the [leadership](https://github.com/coffeescript6/discuss/issues/3) and [compiler starting point](https://github.com/coffeescript6/discuss/issues/25) issues mentioned above, the [Issues](https://github.com/coffeescript6/discuss/issues) for this repo covers the various ES2015+ features and discussions regarding how to implement them. If you don’t see your favorite ES2015+ feature there, or want to propose your own new feature for the language, please [open an issue](https://github.com/coffeescript6/discuss/issues/new). That’s also the place to discuss the specifics of how to move this project forward.
 
 If you disagree with any part of this document, please [open a pull request](https://github.com/coffeescript6/discuss/pulls) with a suggested revision and we can discuss it.
-
-## Relevant Discussions
-- https://github.com/jashkenas/coffeescript/issues/4078
-- https://github.com/jashkenas/coffeescript/issues/3162
-- https://github.com/jashkenas/coffeescript/issues/4228
-- https://github.com/jashkenas/coffeescript/issues/3832
-- (might as well scroll through https://github.com/jashkenas/coffeescript/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aopen%20es6 )
-- https://github.com/michaelficarra/CoffeeScriptRedux/issues/336
-- https://github.com/michaelficarra/CoffeeScriptRedux/issues/338
