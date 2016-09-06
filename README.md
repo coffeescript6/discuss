@@ -71,11 +71,11 @@ We also should come up with a defined leadership structure and formal process fo
 
 ### Framework Incompatibilities: Supporting Essential ES2015 Features
 
-CoffeeScript is hemorrhaging marketshare the longer that incompatibilities with popular frameworks and build tools go unaddressed. We must support modules and classes ASAP, and that means building them in the current compiler. In the case of classes, that probably means a flag to opt-in to new ES2015 class syntax and output. Any other missing ES2015 features that preclude CoffeeScript’s selection for a project must also be addressed immediately, as patches to the current compiler.
+CoffeeScript is hemorrhaging marketshare the longer that incompatibilities with popular frameworks and build tools go unaddressed. We must support modules and classes ASAP, and that means building them in the current compiler. In the case of classes, that probably means a flag to opt-in to new ES2015 class syntax and output. Any other missing ES2015 features that preclude CoffeeScript’s selection for a project must also be addressed immediately, as patches to the current compiler. See [proposal for supporting ES2015+ features here](./Features.md).
 
 ### Developer Happiness: Supporting Optional ES2015+ Features
 
-Features that developers enjoy in ES2015 that are appropriate to implement in CoffeeScript, like `const`, should be implemented as time permits. These features should be implemented in a new compiler, assuming we build one; and possibly also in the old compiler too if such an implementation is easy and doesn’t break backward compatibility. Any feature implemented in both compilers should have identical syntax. See [technical discussion of how to implement a new compiler here](./COMPILER.md).
+Features that developers enjoy in ES2015 that are appropriate to implement in CoffeeScript, like `const`, should be implemented as time permits. These features should be implemented in a new compiler, assuming we build one; and possibly also in the old compiler too if such an implementation is easy and doesn’t break backward compatibility. Any feature implemented in both compilers should have identical syntax. See [technical discussion of how to implement a new compiler here](./Compiler.md).
 
 ### Modernizing Output
 
