@@ -36,12 +36,10 @@ foo := 42
 which becomes:
 
 ```js
-const foo = 42
+const foo = 42;
 ```
 
-This has the advantage that it’s not a breaking change; currently `:=` fails to compile. Adding support for this new operator includes mimicking with `const` what CoffeeScript currently does with `var`, in that it tracks all assigned variables and initializes them together in one `var` statement at the top of the scope.
-
-There is no need to support `?:=`, since by definition constants can’t be reassigned.
+This has the advantage that it’s not a breaking change; currently `:=` fails to compile. `const` variables must be assigned and declared in the same operation, so such declarations would happen in JavaScript at the same place in your code (unlike `var` declarations which happen at the top of the scope). There is no need to support `?:=`, since by definition constants can’t be reassigned.
 
 Nothing else would be changed by adding this new operator. Normal assignment is handled as it is today, with `var`. Even though using `:=` would cause `const` to be in the generated output, this feature is “opt in” like modules and the same warning would apply about transpiling CoffeeScript’s output.
 
