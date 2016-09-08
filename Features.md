@@ -45,7 +45,9 @@ Nothing else would be changed by adding this new operator. Normal assignment is 
 
 ### `async`/`await` [(#10)](https://github.com/coffeescript6/discuss/issues/10)
 
-This isn’t even standardized yet; it’s not part of ES2015 or ES2016, though support has started appearing in browsers.
+An [old pull request](https://github.com/jashkenas/coffeescript/pull/3757) basically implements this feature exactly as we’ve outlined it below, though the PR needs updating to remove ES5 shims.
+
+`async`/`await` isn’t completely standardized yet; it’s not part of ES2015 or ES2016, though support has started appearing in browsers. [It has reached Stage 4 of ES2017](https://github.com/tc39/proposals/blob/master/finished-proposals.md).
 
 CoffeeScript’s version would add only the `await` keyword, which would automatically cause CoffeeScript to output an `async` keyword where needed. This behavior is similar to how generators are handled, where the presence of a `yield` keyword causes CoffeeScript to declare the function as `function*`: the presence of `await` would cause CoffeeScript to declare its associated function with `async`.
 
