@@ -14,38 +14,21 @@ This is in progress [here](https://github.com/jashkenas/coffeescript/pull/4300) 
 
 ### Classes [(#22)](https://github.com/coffeescript6/discuss/issues/22)
 
-We have consensus that there needs to be some way for CoffeeScript to output ESNext native `class foo extends bar` syntax, in order to interoperate with libraries that use ECMAScript classes. Waiting on a consensus for the approach and syntax in [#22](https://github.com/coffeescript6/discuss/issues/22).
+ECMAScript classes will be implemented via a new `esclass` keyword, that has different syntax from the existing `class` keyword. `esclass` will compile to ES2015 `class`, as will its constructor, methods, getters and setters. `super` inside `esclass` will function like ES2015’s `super`. There will be no sugar on top of `esclass`, to avoid building a customization that might get implemented differently by ECMAScript in the future.
 
-> **This is a breaking change for the current compiler.** Either the `class` keyword gets redefined, or we’re adding a new keyword to implement the new behavior (and old code that might have used that now-reserved keyword could break). We would need to choose whether the breaking change would be opt-in (the current behavior unless a flag was set) or opt-out (the new behavior unless a flag was set). If we go with the “new `esclass` keyword” proposal, the breaking change would likely be opt-*out*.
+This is a very minor breaking change for the current compiler. Any current projects using `esclass` as a symbol (e.g., a variable or function or class name) will need to be refactored, with the symbol renamed. This breaking change doesn’t seem major enough to warrant an opt-in flag.
 
 ### Template literals [(#28)](https://github.com/coffeescript6/discuss/issues/28)
 
-Some new libraries require support for ECMAScript template literals, which are incompatible with CoffeeScript’s backticks. Waiting on consensus for the approach and syntax in [#28](https://github.com/coffeescript6/discuss/issues/28).
+Some new libraries require support for ECMAScript template literals, which are incompatible with CoffeeScript’s backticks. Support would be added for `myTag"hello #{'wo'+'rld'}"` or `myTag"""some multiline string"""`. Such syntax is currently not allowed in CoffeeScript, so enabling support for it would not be a breaking change.
 
 ## Medium Priority
 
 These features aren’t required for CoffeeScript to be used in any project, but there’s great desire in the community for these to be added.
 
-### `const` assignment operator [(#1)](https://github.com/coffeescript6/discuss/issues/1)
-
-For whatever reason, `let` and `const` are among the most popular features introduced by ES2015. Per [#1](https://github.com/coffeescript6/discuss/issues/1), we have consensus that there should be some way to force variable assignment to use `const` instead of `var`. The syntax for such a “`const` assignment” shall be:
-
-```coffee
-foo := 42
-```
-which becomes:
-
-```js
-const foo = 42;
-```
-
-This has the advantage that it’s not a breaking change; currently `:=` fails to compile. `const` variables must be assigned and declared in the same operation, so such declarations would happen in JavaScript at the same place in your code (unlike `var` declarations which happen at the top of the scope). There is no need to support `?:=`, since by definition constants can’t be reassigned.
-
-Nothing else would be changed by adding this new operator. Normal assignment is handled as it is today, with `var`. Even though using `:=` would cause `const` to be in the generated output, this feature is “opt in” like modules and the same warning would apply about transpiling CoffeeScript’s output.
-
 ### `async`/`await` [(#10)](https://github.com/coffeescript6/discuss/issues/10)
 
-An [old pull request](https://github.com/jashkenas/coffeescript/pull/3757) basically implements this feature exactly as we’ve outlined it below, though the PR needs updating to remove ES5 shims.
+> An [old pull request](https://github.com/jashkenas/coffeescript/pull/3757) basically implements this feature exactly as we’ve outlined it below, though the PR contains an ES5 shim. There is a discussion of whether the feature should be implemented with the shim, only as outputting ESNext syntax, or outputting both (with the ESNext output triggered by a new flag).
 
 `async`/`await` isn’t completely standardized yet; it’s not part of ES2015 or ES2016, though support has started appearing in browsers. [It has reached Stage 4 of ES2017](https://github.com/tc39/proposals/blob/master/finished-proposals.md).
 
@@ -75,7 +58,18 @@ main = ->
 main()
 ```
 
-> **This is a breaking change for the current compiler.** The `await` keyword is not currently reserved, so adding it as a reserved word would break any code that currently uses `await` as a variable or function name. We would need to choose whether the breaking change would be opt-in (no `await` unless a flag is set) or opt-out (`await` is a reserved word unless a flag is set). This breaking change would likely be opt-*out*.
+> **This is a breaking change for the current compiler.** The `await` keyword is not currently reserved, so adding it as a reserved word would break any code that currently uses `await` as a symbol.
+
+### `const` assignment operator [(#31)](https://github.com/coffeescript6/discuss/issues/31) or
+
+### Block assignment `let` and `const` assignment operators [(#35)](https://github.com/coffeescript6/discuss/issues/35)
+
+For whatever reason, `let` and `const` are among the most popular features introduced by ES2015. Awaiting consensus on which of these two proposals we want to adopt, if either. Per [#1](https://github.com/coffeescript6/discuss/issues/1), there seems to be consensus that we want some way to support `const` and probably `let` in CoffeeScript.
+
+If we support `const` only, [(#31)](https://github.com/coffeescript6/discuss/issues/31), a new `:=` operator would be added, e.g. `a := 1` would become `const a = 1;`. This would give us the “throw an error if a `const`-declared variable is reassigned” feature of `const`, plus block-scoping but only for `const`s.
+
+If we support `let` and `const`, [(#35)](https://github.com/coffeescript6/discuss/issues/35), which would be necessary if we want to gain the block-scope aspects of the new `let` and `const` keywords, we would need two new operators: `:=` for `let` and `:==` for `const`. The `:=`-defined variables would get their `let` declarations grouped together at the tops of their blocks.
+
 
 ## Low Priority
 
@@ -91,7 +85,7 @@ Fat arrows should be transpiled into ES2015 `=>`. They took our good idea, let�
 
 **Only for the new ESNext-outputting compiler, or the original compiler behind a flag.**
 
-When a variable isn’t declared using the new `:=` operator that produces `const` (see above), CoffeeScript should automatically declare it with `let` whenever possible.
+When a variable isn’t declared using the new operator that produces `const` (see above), CoffeeScript should automatically declare it with `let` whenever possible.
 
 ### `for … of` [(#11)](https://github.com/coffeescript6/discuss/issues/11)
 
@@ -104,6 +98,8 @@ There should be some way to output ESNext `for … of`, perhaps via a new `for` 
 These are ESNext features where a consensus has yet to be reached on whether CoffeeScript should support them.
 
 ### Getters and setters [(#17)](https://github.com/coffeescript6/discuss/issues/17)
+
+Probably need to be supported as part of adding support for ES2015 classes.
 
 ## No Action
 
