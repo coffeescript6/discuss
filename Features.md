@@ -10,13 +10,11 @@ These features affect interopability and should take priority over all other fea
 
 ### Modules: `import` and `export` [(#7)](https://github.com/coffeescript6/discuss/issues/7)
 
-This is in progress [here](https://github.com/jashkenas/coffeescript/pull/4300) as a pull request to the original CoffeeScript compiler.
+[This has been merged](https://github.com/jashkenas/coffeescript/pull/4300) into the original CoffeeScript compiler. It will ship with the next release.
 
 ### Classes [(#22)](https://github.com/coffeescript6/discuss/issues/22)
 
-ECMAScript classes will be implemented via a new `esclass` keyword, that has different syntax from the existing `class` keyword. `esclass` will compile to ES2015 `class`, as will its constructor, methods, getters and setters. `super` inside `esclass` will function like ES2015’s `super`. There will be no sugar on top of `esclass`, to avoid building a customization that might get implemented differently by ECMAScript in the future.
-
-This is a very minor breaking change for the current compiler. Any current projects using `esclass` as a symbol (e.g., a variable or function or class name) will need to be refactored, with the symbol renamed. This breaking change doesn’t seem major enough to warrant an opt-in flag.
+Awaiting consensus. We could create a new `esclass` that outputs to `class`, leaving the old CoffeeScript `class` alone; or we can break backward compatibility and have `class` output to `class`, and certain things like executable class bodies are no longer allowed.
 
 ### Template literals [(#28)](https://github.com/coffeescript6/discuss/issues/28)
 
@@ -28,7 +26,7 @@ These features aren’t required for CoffeeScript to be used in any project, but
 
 ### `async`/`await` [(#10)](https://github.com/coffeescript6/discuss/issues/10)
 
-> An [old pull request](https://github.com/jashkenas/coffeescript/pull/3757) basically implements this feature exactly as we’ve outlined it below, though the PR contains an ES5 shim. There is a discussion of whether the feature should be implemented with the shim, only as outputting ESNext syntax, or outputting both (with the ESNext output triggered by a new flag).
+> An [old pull request](https://github.com/jashkenas/coffeescript/pull/3757) basically implements this feature exactly as we’ve outlined it below, though the PR contains an ES5 shim.
 
 `async`/`await` isn’t completely standardized yet; it’s not part of ES2015 or ES2016, though support has started appearing in browsers. [It has reached Stage 4 of ES2017](https://github.com/tc39/proposals/blob/master/finished-proposals.md).
 
@@ -60,9 +58,7 @@ main()
 
 > **This is a breaking change for the current compiler.** The `await` keyword is not currently reserved, so adding it as a reserved word would break any code that currently uses `await` as a symbol.
 
-### `const` assignment operator [(#31)](https://github.com/coffeescript6/discuss/issues/31) or
-
-### Block assignment `let` and `const` assignment operators [(#35)](https://github.com/coffeescript6/discuss/issues/35)
+### Block assignment `let` and `const` assignment operators [(#31)](https://github.com/coffeescript6/discuss/issues/31) or [(#35)](https://github.com/coffeescript6/discuss/issues/35)
 
 For whatever reason, `let` and `const` are among the most popular features introduced by ES2015. Awaiting consensus on which of these two proposals we want to adopt, if either. Per [#1](https://github.com/coffeescript6/discuss/issues/1), there seems to be consensus that we want some way to support `const` and probably `let` in CoffeeScript.
 

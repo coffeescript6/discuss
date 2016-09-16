@@ -23,9 +23,9 @@
 
 ```
 
-This repo intends to serve as a place to discuss the future of CoffeeScript, especially as it relates to ES2015+ (ES6). 
+This repo intends to serve as a place to discuss the future of CoffeeScript, especially as it relates to ES2015+ (ES6).
 
-[Open an issue](https://github.com/coffeescript6/discuss/issues/new) to propose an idea or raise a question! This is also where proposals for adding features to CoffeeScript can be discussed. As proposals reach consensus, the consensus will be summarized in [Features](./Features.md).
+[Open an issue](https://github.com/coffeescript6/discuss/issues/new) to propose an idea or raise a question! This is also where proposals for adding features to CoffeeScript can be discussed. As proposals reach consensus, the consensus will be summarized in [Features](./Features.md). No code will be developed here; the “CoffeeScript 6” project is one of discussion, directed at updating CoffeeScript itself.
 
 You can also drop by this [Gitter Chatroom](https://gitter.im/csnext/Lobby).
 
@@ -70,20 +70,6 @@ Features that developers enjoy in ES2015+ that are appropriate to implement in C
 ### Modernizing Output
 
 CoffeeScript’s output should be modernized as much as possible. Fat arrows should output as fat arrows, destructuring should output as destructuring, etc. But this should be the **last priority**—it makes our source code cleaner, and debugging eventually easier when ES2015 features are supported natively in runtimes, but otherwise ES2015 output has little benefit for developers. That said, *new* features, especially ES2015+ ones, should be output as ES2015+ code. We shouldn’t duplicate the work of the Babel team, implementing ES5 polyfills. The modernized output might be implemented as part of an effort to create a [new compiler](./Compiler.md), or as a [flag in the current one](https://github.com/coffeescript6/discuss/issues/34).
-
-### Public Roadmap
-
-The [coffeescript6 repo](https://github.com/coffeescript6) is a big step in the right direction toward remedying the issue defining CoffeeScript’s currently unclear future. When we reach a consensus, our plan should be posted on [coffeescript.org](http://coffeescript.org/) and the [README for the coffee-script repo](https://github.com/jashkenas/coffeescript).
-
-### Leadership
-
-We also should come up with a defined leadership structure and formal process for approving features and syntax. As great as @jashkenas is, a language that so many people depend on should not be subject to the whims of one person. [The leadership question is one that needs to be worked out.](https://github.com/coffeescript6/discuss/issues/3)
-
-## Name
-
-The “CoffeeScript 6.0” name was chosen as a name for the discussion of how to modernize CoffeeScript in response to ES6. It is not intended as the name of any new compiler.
-
-There’s no need for something fancy or new. We already have considerable recognition under the name “CoffeeScript,” so we should keep it. Let’s refer to the soon-to-be-old compiler as the Legacy CoffeeScript compiler, and the new one—well, “it’s just CoffeeScript.”
 
 ## Open Questions
 
