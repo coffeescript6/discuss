@@ -12,13 +12,13 @@ These features affect interopability and should take priority over all other fea
 
 > CoffeeScript 1.x and 2
 
-[This has been merged](https://github.com/jashkenas/coffeescript/pull/4300) into the original CoffeeScript compiler. It will ship with the next release.
+[This has been merged](https://github.com/jashkenas/coffeescript/pull/4300) and released as part of CoffeeScript 1.11.
 
 ### Classes [(#22)](https://github.com/coffeescript6/discuss/issues/22)
 
 > CoffeeScript 2 only
 
-As part of CoffeeScript 2, we will revise CoffeeScript’s `class` syntax to be compatible with ECMAScript’s `class`; this means no code in class bodies, no using `this` in a constructor before calling `super`, etc. We will inherit the limitations of ECMAScript’s `class`, but the benefit of being able to extend them and generate native ES2015 classes. Getters and setters [(#17)](https://github.com/coffeescript6/discuss/issues/17) would need to be implemented as part of supporting ES classes.
+As part of CoffeeScript 2, we will revise CoffeeScript’s `class` syntax to be compatible with ECMAScript’s `class`; this means no code in class bodies, no using `this` in a constructor before calling `super`, etc. We try to keep as many features of the CoffeeScript `class` as possible while still ouputting the ECMAScript `class` keyword, so that we can extend ES classes and create extendable native classes. Getters and setters [(#17)](https://github.com/coffeescript6/discuss/issues/17) would probably be implemented as part of supporting ES classes. This is in progress at [jashkenas/coffeescript #4330](https://github.com/jashkenas/coffeescript/pull/4330).
 
 ### Tagged template literals [(#28)](https://github.com/coffeescript6/discuss/issues/28)
 
@@ -32,37 +32,9 @@ These features aren’t required for CoffeeScript to be used in any project, but
 
 ### `async`/`await` [(#10)](https://github.com/coffeescript6/discuss/issues/10)
 
-> CoffeeScript 1.x and 2
+> CoffeeScript 2
 
-> An [old pull request](https://github.com/jashkenas/coffeescript/pull/3757) basically implements this feature exactly as we’ve outlined it below, though the PR contains an ES5 shim which should be removed.
-
-`async`/`await` isn’t completely standardized yet; it’s not part of ES2015 or ES2016, though it is supported in Edge and in Chrome behind a flag. [It has reached Stage 4 of ES2017](https://github.com/tc39/proposals/blob/master/finished-proposals.md).
-
-CoffeeScript’s version would add only the `await` keyword, which would automatically cause CoffeeScript to output an `async` keyword where needed. This behavior is similar to how generators are handled, where the presence of a `yield` keyword causes CoffeeScript to declare the function as `function*`: the presence of `await` would cause CoffeeScript to declare its associated function with `async`.
-
-So to take the example from http://stackabuse.com/node-js-async-await-in-es7/, this JavaScript:
-
-```js
-var request = require('request-promise');
-
-async function main() {  
-  var body = await request.get('https://api.github.com/repos/scottwrobinson/camo');
-  console.log('Body:', body);
-}
-main();
-```
-
-could be written in CoffeeScript as:
-
-```coffee
-request = require 'request-promise'
-
-main = ->
-  body = await request.get 'https://api.github.com/repos/scottwrobinson/camo'
-  console.log 'Body:', body
-
-main()
-```
+[This has been merged](https://github.com/jashkenas/coffeescript/pull/3757) into the `2` branch.
 
 ### Backticked blocks [(#42)](https://github.com/coffeescript6/discuss/issues/42)
 
@@ -84,7 +56,7 @@ Output CoffeeScript’s interpolated strings—`"hello, #{name}!"`—as ES2015 t
 
 > CoffeeScript 2 only
 
-Fat arrows should be transpiled into ES2015 `=>`. They took our good idea, let’s celebrate by using it.
+[This has been merged](https://github.com/jashkenas/coffeescript/pull/4311) into the `2` branch.
 
 ### Destructuring assignment [(#18)](https://github.com/coffeescript6/discuss/issues/18)
 
@@ -94,7 +66,7 @@ Fat arrows should be transpiled into ES2015 `=>`. They took our good idea, let�
 
 > CoffeeScript 2 only
 
-There should be some way to output ESNext `for … of`, perhaps via a new `for` syntax. Awaiting consensus.
+[This is almost complete.](https://github.com/jashkenas/coffeescript/pull/4306)
 
 ## Uncertain
 
@@ -123,4 +95,3 @@ These are other features that have been discussed, but the consensus at the mome
 ### Decorators [(#9)](https://github.com/coffeescript6/discuss/issues/9)
 
 ### Type annotations [(#12)](https://github.com/coffeescript6/discuss/issues/12)
-
