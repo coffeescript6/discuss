@@ -8,7 +8,7 @@ Features are ordered by priority, which is determined (subjectively) by how impo
 
 These features affect interopability and should take priority over all other features. These should be implemented ASAP in the current compiler, in addition to any new compiler that gets created later.
 
-### Modules: `import` and `export` [(#7)](https://github.com/coffeescript6/discuss/issues/7)
+### ~~Modules: `import` and `export` [(#7)](https://github.com/coffeescript6/discuss/issues/7)~~
 
 > CoffeeScript 1.x and 2
 
@@ -18,19 +18,19 @@ These features affect interopability and should take priority over all other fea
 
 > CoffeeScript 2 only
 
-As part of CoffeeScript 2, we will revise CoffeeScript’s `class` syntax to be compatible with ECMAScript’s `class`; this means no code in class bodies, no using `this` in a constructor before calling `super`, etc. We try to keep as many features of the CoffeeScript `class` as possible while still ouputting the ECMAScript `class` keyword, so that we can extend ES classes and create extendable native classes. Getters and setters [(#17)](https://github.com/coffeescript6/discuss/issues/17) would probably be implemented as part of supporting ES classes. This is in progress at [jashkenas/coffeescript #4330](https://github.com/jashkenas/coffeescript/pull/4330).
+As part of CoffeeScript 2, we will revise CoffeeScript’s `class` syntax to be compatible with ECMAScript’s `class`; this means no code in class bodies, no using `this` in a constructor before calling `super`, etc. We try to keep as many features of the CoffeeScript `class` as possible while still ouputting the ECMAScript `class` keyword, so that we can extend ES classes and create extendable native classes. Getters and setters [(#17)](https://github.com/coffeescript6/discuss/issues/17) would probably be implemented as part of supporting ES classes. This is in progress at [jashkenas/coffeescript #4330](https://github.com/jashkenas/coffeescript/pull/4354).
 
 ### Tagged template literals [(#28)](https://github.com/coffeescript6/discuss/issues/28)
 
 > CoffeeScript 1.x and 2
 
-Some new libraries require support for ECMAScript template literals, which are incompatible with CoffeeScript’s backticks. Support would be added for `myTag"hello #{'wo'+'rld'}"` or `myTag"""some multiline string"""`. Such syntax is currently not allowed in CoffeeScript, so enabling support for it would not be a breaking change.
+Some new libraries require support for ECMAScript template literals, which are incompatible with CoffeeScript’s backticks. Support would be added for `myTag"hello #{'wo'+'rld'}"` or `myTag"""some multiline string"""`. Such syntax is currently not allowed in CoffeeScript, so enabling support for it would not be a breaking change. This is in progress at [jashkenas/coffeescript #4352](https://github.com/jashkenas/coffeescript/pull/4352).
 
 ## Medium Priority
 
 These features aren’t required for CoffeeScript to be used in any project, but there’s great desire in the community for these to be added.
 
-### `async`/`await` [(#10)](https://github.com/coffeescript6/discuss/issues/10)
+### ~~`async`/`await` [(#10)](https://github.com/coffeescript6/discuss/issues/10)~~
 
 > CoffeeScript 2
 
@@ -52,7 +52,7 @@ These are nice-to-have features that should be implemented as time permits, prob
 
 Output CoffeeScript’s interpolated strings—`"hello, #{name}!"`—as ES2015 template literals: `` `hello, ${name}!` ``
 
-### Fat arrows `=>` output as `=>` [(#8)](https://github.com/coffeescript6/discuss/issues/8)
+### ~~Fat arrows `=>` output as `=>` [(#8)](https://github.com/coffeescript6/discuss/issues/8)~~
 
 > CoffeeScript 2 only
 
