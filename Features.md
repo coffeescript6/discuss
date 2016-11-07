@@ -18,7 +18,7 @@ These features affect interopability and should take priority over all other fea
 
 > CoffeeScript 2 only
 
-As part of CoffeeScript 2, we will revise CoffeeScript’s `class` syntax to be compatible with ECMAScript’s `class`; this means no code in class bodies, no using `this` in a constructor before calling `super`, etc. We try to keep as many features of the CoffeeScript `class` as possible while still ouputting the ECMAScript `class` keyword, so that we can extend ES classes and create extendable native classes. Getters and setters [(#17)](https://github.com/coffeescript6/discuss/issues/17) would probably be implemented as part of supporting ES classes. This is in progress at [jashkenas/coffeescript #4330](https://github.com/jashkenas/coffeescript/pull/4354).
+As part of CoffeeScript 2, we will revise CoffeeScript’s `class` syntax to be compatible with ECMAScript’s `class`; this means no code in class bodies, no using `this` in a constructor before calling `super`, etc. We try to keep as many features of the CoffeeScript `class` as possible while still ouputting the ECMAScript `class` keyword, so that we can extend ES classes and create extendable native classes. Getters and setters [(#17)](https://github.com/coffeescript6/discuss/issues/17) would probably be implemented as part of supporting ES classes. This is in progress at [jashkenas/coffeescript #4354](https://github.com/jashkenas/coffeescript/pull/4354).
 
 ### Tagged template literals [(#28)](https://github.com/coffeescript6/discuss/issues/28)
 
