@@ -24,7 +24,7 @@ As part of CoffeeScript 2, we will update CoffeeScript’s `class` to output an 
 
 > CoffeeScript 1.x and 2
 
-[This has been merged](https://github.com/jashkenas/coffeescript/pull/4352) and released as part of CoffeeScript 1.12.
+[This has been merged](https://github.com/jashkenas/coffeescript/pull/4352) and will be released as part of CoffeeScript 1.12.
 
 ## Medium Priority
 
@@ -46,17 +46,17 @@ Building off of the essential class-related items in Top Priority, this item is 
 
 > CoffeeScript 1.x and 2
 
-[This has been merged](https://github.com/jashkenas/coffeescript/pull/4357) and released as part of CoffeeScript 1.12.
+[This has been merged](https://github.com/jashkenas/coffeescript/pull/4357) and will be released as part of CoffeeScript 1.12.
 
 ## Low Priority
 
 These are nice-to-have features that should be implemented as time permits, probably only in the “new” compiler if one gets created. Any change that causes ES2015 output and isn’t opt-in needs to either be enabled by a flag or only in the new, ESNext-outputting compiler.
 
-### Template literals [(#41)](https://github.com/coffeescript6/discuss/issues/41)
+### ~~Template literals [(#41)](https://github.com/coffeescript6/discuss/issues/41)~~
 
 > CoffeeScript 2 only
 
-Output CoffeeScript’s interpolated strings—`"hello, #{name}!"`—as ES2015 template literals: `` `hello, ${name}!` `` This is in progress at [jashkenas/coffeescript #4365](https://github.com/jashkenas/coffeescript/pull/4365)
+[This has been merged](https://github.com/jashkenas/coffeescript/pull/4365) into the `2` branch.
 
 ### ~~Fat arrows `=>` output as `=>` [(#8)](https://github.com/coffeescript6/discuss/issues/8)~~
 
@@ -72,17 +72,11 @@ Output CoffeeScript’s interpolated strings—`"hello, #{name}!"`—as ES2015 t
 
 > CoffeeScript 1.x and 2
 
-[This is has been merged](https://github.com/jashkenas/coffeescript/pull/4306) and released as part of CoffeeScript 1.12.
+[This is has been merged](https://github.com/jashkenas/coffeescript/pull/4306) and will be released as part of CoffeeScript 1.12.
 
 ## Uncertain
 
 These are features we’re not sure we will implement, in any version of CoffeeScript:
-
-### Inferred `let` assignment [(#1)](https://github.com/coffeescript6/discuss/issues/1)
-
-> CoffeeScript 2 only
-
-When a variable isn’t declared using the new operator that produces `const` (see above), CoffeeScript should automatically declare it with `let` whenever possible.
 
 ### Block assignment `let` and `const` assignment operators [(#31)](https://github.com/coffeescript6/discuss/issues/31) or [(#35)](https://github.com/coffeescript6/discuss/issues/35)
 
@@ -93,6 +87,12 @@ For whatever reason, `let` and `const` are among the most popular features intro
 If we support `const` only, [(#31)](https://github.com/coffeescript6/discuss/issues/31), a new `:=` operator would be added, e.g. `a := 1` would become `const a = 1;`. This would give us the “throw an error if a `const`-declared variable is reassigned” feature of `const`, plus block-scoping but only for `const`s.
 
 If we support `let` and `const`, [(#35)](https://github.com/coffeescript6/discuss/issues/35), which would be necessary if we want to gain the block-scope aspects of the new `let` and `const` keywords, we would need two new operators: `:=` for `let` and `:==` for `const`. The `:=`-defined variables would get their `let` declarations grouped together at the tops of their blocks.
+
+### Inferred `let` assignment [(#1)](https://github.com/coffeescript6/discuss/issues/1)
+
+> CoffeeScript 2 only
+
+When a variable isn’t declared using a new operator that produces `const` (see above), CoffeeScript should automatically declare it with `let` whenever possible.
 
 ## No Action
 
