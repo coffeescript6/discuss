@@ -24,7 +24,7 @@ As part of CoffeeScript 2, we will update CoffeeScript’s `class` to output an 
 
 > CoffeeScript 1.x and 2
 
-[This has been merged](https://github.com/jashkenas/coffeescript/pull/4352) and will be released as part of CoffeeScript 1.12.
+[This has been merged](https://github.com/jashkenas/coffeescript/pull/4352) and released as part of CoffeeScript 1.12.
 
 ## Medium Priority
 
@@ -46,7 +46,7 @@ Building off of the essential class-related items in Top Priority, this item is 
 
 > CoffeeScript 1.x and 2
 
-[This has been merged](https://github.com/jashkenas/coffeescript/pull/4357) and will be released as part of CoffeeScript 1.12.
+[This has been merged](https://github.com/jashkenas/coffeescript/pull/4357) and released as part of CoffeeScript 1.12.
 
 ## Low Priority
 
@@ -72,7 +72,7 @@ These are nice-to-have features that should be implemented as time permits, prob
 
 > CoffeeScript 1.x and 2
 
-[This is has been merged](https://github.com/jashkenas/coffeescript/pull/4306) and will be released as part of CoffeeScript 1.12.
+[This is has been merged](https://github.com/jashkenas/coffeescript/pull/4306) and released as part of CoffeeScript 1.12.
 
 ## Uncertain
 
