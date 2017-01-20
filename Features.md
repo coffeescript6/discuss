@@ -14,11 +14,11 @@ These features affect interopability and should take priority over all other fea
 
 [This has been merged](https://github.com/jashkenas/coffeescript/pull/4300) and released as part of CoffeeScript 1.11.
 
-### Classes: Extend ES Classes [(#22)](https://github.com/coffeescript6/discuss/issues/22)
+### ~~Classes: Extend ES Classes, Idiomatic Methods [(#22)](https://github.com/coffeescript6/discuss/issues/22)~~
 
 > CoffeeScript 2 only
 
-As part of CoffeeScript 2, we will update CoffeeScript’s `class` to output an ES `class` keyword, so that ES2015 classes can be extended and so that CoffeeScript classes can be extended in ES. We will also revise CoffeeScript’s class output to handle `this` in a constructor before calling `super`, and any other changes we need to make to adhere to ES syntax. This is the “must-do” part of classes; improving the output by making it more idiomatic (not using `prototype` or `__super__`, etc.) is a separate item under Medium Priority below. This is in progress at [jashkenas/coffeescript #4354](https://github.com/jashkenas/coffeescript/pull/4354).
+[This has been merged](https://github.com/jashkenas/coffeescript/pull/4354) into the `2` branch.
 
 ### ~~Tagged template literals [(#28)](https://github.com/coffeescript6/discuss/issues/28)~~
 
@@ -30,11 +30,17 @@ As part of CoffeeScript 2, we will update CoffeeScript’s `class` to output an 
 
 These features aren’t required for CoffeeScript to be used in any project, but there’s great desire in the community for these to be added.
 
-### Classes: Idiomatic ES Output [(#22)](https://github.com/coffeescript6/discuss/issues/22)
+### Classes: Idiomatic `super` [(#22)](https://github.com/coffeescript6/discuss/issues/22)
 
 > CoffeeScript 2 only
 
-Building off of the essential class-related items in Top Priority, this item is for the nonessential items like removing our dependence on `prototype` and `__super__`, and generally cleaning up our output and making it more idiomatic. This is where we would also add support for getters and setters [(#17)](https://github.com/coffeescript6/discuss/issues/17) and the `static` keyword. This is in progress at [jashkenas/coffeescript #4354](https://github.com/jashkenas/coffeescript/pull/4354).
+CoffeeScript’s `super` should always be compiled to ES2015’s `super`. This is in progress at [jashkenas/coffeescript #4424](https://github.com/jashkenas/coffeescript/pull/4424).
+
+### Classes: `static`, `get` and `set` keywords [(#17)](https://github.com/coffeescript6/discuss/issues/17)
+
+> CoffeeScript 2 only
+
+Classes should support getters and setters [(#17)](https://github.com/coffeescript6/discuss/issues/17) and the `static` keyword.
 
 ### ~~`async`/`await` [(#10)](https://github.com/coffeescript6/discuss/issues/10)~~
 
@@ -52,6 +58,10 @@ Building off of the essential class-related items in Top Priority, this item is 
 
 These are nice-to-have features that should be implemented as time permits, probably only in the “new” compiler if one gets created. Any change that causes ES2015 output and isn’t opt-in needs to either be enabled by a flag or only in the new, ESNext-outputting compiler.
 
+### Destructuring assignment [(#18)](https://github.com/coffeescript6/discuss/issues/18)
+
+> CoffeeScript 2 only
+
 ### ~~Template literals [(#41)](https://github.com/coffeescript6/discuss/issues/41)~~
 
 > CoffeeScript 2 only
@@ -64,39 +74,19 @@ These are nice-to-have features that should be implemented as time permits, prob
 
 [This has been merged](https://github.com/jashkenas/coffeescript/pull/4311) into the `2` branch.
 
-### Destructuring assignment [(#18)](https://github.com/coffeescript6/discuss/issues/18)
-
-> CoffeeScript 2 only
-
 ### ~~`for … of` [(#11)](https://github.com/coffeescript6/discuss/issues/11)~~
 
 > CoffeeScript 1.x and 2
 
 [This is has been merged](https://github.com/jashkenas/coffeescript/pull/4306) and released as part of CoffeeScript 1.12.
 
-## Uncertain
-
-These are features we’re not sure we will implement, in any version of CoffeeScript:
-
-### Block assignment `let` and `const` assignment operators [(#31)](https://github.com/coffeescript6/discuss/issues/31) or [(#35)](https://github.com/coffeescript6/discuss/issues/35)
-
-> CoffeeScript 2 only
-
-For whatever reason, `let` and `const` are among the most popular features introduced by ES2015. Awaiting consensus on which of these two proposals we want to adopt, if either. Per [#1](https://github.com/coffeescript6/discuss/issues/1), there seems to be consensus that we want some way to support `const` and probably `let` in CoffeeScript.
-
-If we support `const` only, [(#31)](https://github.com/coffeescript6/discuss/issues/31), a new `:=` operator would be added, e.g. `a := 1` would become `const a = 1;`. This would give us the “throw an error if a `const`-declared variable is reassigned” feature of `const`, plus block-scoping but only for `const`s.
-
-If we support `let` and `const`, [(#35)](https://github.com/coffeescript6/discuss/issues/35), which would be necessary if we want to gain the block-scope aspects of the new `let` and `const` keywords, we would need two new operators: `:=` for `let` and `:==` for `const`. The `:=`-defined variables would get their `let` declarations grouped together at the tops of their blocks.
-
-### Inferred `let` assignment [(#1)](https://github.com/coffeescript6/discuss/issues/1)
-
-> CoffeeScript 2 only
-
-When a variable isn’t declared using a new operator that produces `const` (see above), CoffeeScript should automatically declare it with `let` whenever possible.
-
 ## No Action
 
 These are other features that have been discussed, but the consensus at the moment is that no action should be taken to implement them.
+
+### Block assignment `let` and `const` assignment operators [(#31)](https://github.com/coffeescript6/discuss/issues/31) or [(#35)](https://github.com/coffeescript6/discuss/issues/35)
+
+### Inferred `let` assignment [(#1)](https://github.com/coffeescript6/discuss/issues/1)
 
 ### Decorators [(#9)](https://github.com/coffeescript6/discuss/issues/9)
 
