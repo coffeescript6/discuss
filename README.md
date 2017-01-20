@@ -25,9 +25,7 @@
 
 This repo intends to serve as a place to discuss the future of CoffeeScript, especially as it relates to ES2015+ (ES6).
 
-[Open an issue](https://github.com/coffeescript6/discuss/issues/new) to propose an idea or raise a question! This is also where proposals for adding features to CoffeeScript or updating current features’ output can be discussed. As proposals reach consensus, the consensus will be summarized in [Features](./Features.md). No code will be developed here; the “CoffeeScript 6” project is one of discussion, directed at updating CoffeeScript itself.
-
-You can also drop by this [Gitter Chatroom](https://gitter.im/csnext/Lobby).
+[Open an issue](https://github.com/coffeescript6/discuss/issues/new) to propose an idea or raise a question! This is also where proposals for adding features to CoffeeScript or updating current features’ output can be discussed. As proposals reach consensus, the feature will be added [below](features-implemented) and to the [project board](https://github.com/coffeescript6/discuss/projects/1). No code will be developed here; the “CoffeeScript 6” project is one of discussion, directed at updating CoffeeScript itself. You can also drop by this [Gitter chat room](https://gitter.im/csnext/Lobby).
 
 ## Background
 
@@ -37,11 +35,9 @@ Many people were drawn to CoffeeScript because it offered features that JavaScri
 
 Many other people, however, came to CoffeeScript for the clean, readable syntax and the many ways that the language itself helps prevent bugs, such as significant whitespace and the existential operator. CoffeeScript still has these advantages over all versions of JavaScript, and will retain them so long as ECMAScript strives for backward compatibility. But for CoffeeScript to remain a viable choice for developers, it must keep pace with the JavaScript community. At the very least it must be compatible with most popular frameworks and build tools; ideally it will also be current with the latest approved standard. The mantra of CoffeeScript is that “It’s just JavaScript”—but right now, JavaScript is ES2015.
 
-# Proposal for the Future of CoffeeScript
-
 ## Goals
 
-**ES2015 features that modern frameworks require, like modules and classes, must be supported in CoffeeScript ASAP.** We can’t expect developers to continue using CoffeeScript if they must choose between CoffeeScript and whatever hot new framework they want to use for their project. Support for modules is [has been merged in](https://github.com/jashkenas/coffeescript/pull/4300).
+**ES2015 features that modern frameworks require, like modules and classes, must be supported in CoffeeScript ASAP.** We can’t expect developers to continue using CoffeeScript if they must choose between CoffeeScript and whatever hot new framework they want to use for their project. Support for modules is [has been released in CoffeeScript 1.11](https://github.com/jashkenas/coffeescript/pull/4300) and support for classes [has been merged into the `2` branch](https://github.com/jashkenas/coffeescript/pull/4354).
 
 **CoffeeScript should support other ES2015+ features on a case-by-case basis.** There is very little that ES2015 offers that CoffeeScript lacks; but whatever new features that make sense within the constraints of CoffeeScript’s design principles, and can be implemented in a reasonable way, should be supported. We don’t want developers to feel like choosing CoffeeScript means they’re giving up features they had in ES2015. Please refer to the [issues](https://github.com/coffeescript6/discuss/issues) of this repo for discussion around which ES2015+ features to add, and how they should be defined and implemented in CoffeeScript.
 
@@ -53,23 +49,93 @@ Many other people, however, came to CoffeeScript for the clean, readable syntax 
 
 ## The Plan
 
-See the [Features document](./Features.md) for a prioritized list of ES2015+ features that we hope to add to CoffeeScript, including proposed implementation for each feature.
-
-The top priority features are those that imperil interoperability. CoffeeScript is hemorrhaging marketshare the longer that incompatibilities with popular frameworks and build tools go unaddressed. We must support modules, classes and tagged template literals ASAP. See [here](./Features.md#top-priority).
-
-Aside from the top priority features, features that developers enjoy in ES2015+ that are appropriate to implement in CoffeeScript, like `await`, should be implemented as time permits. See [here](./Features.md#medium-priority).
-
-Finally, CoffeeScript’s output should be modernized as much as possible. Fat arrows should output as fat arrows, destructuring should output as destructuring, etc.
-
-CoffeeScript will be split into two branches:
-
 ### CoffeeScript 1.x
 
-New ES2015+ features that can be opt-in by using them and that don’t break backward compatibility, like modules, should be added to CoffeeScript in the current `master` branch. These features would not be shimmed or polyfilled down to ES5; they would be output as ES2015.
+New ES2015+ features that can be opt-in by using them and that don’t break backward compatibility, like modules, have been added to CoffeeScript in the current `master` branch and released. These features aren’t shimmed or polyfilled down to ES5; they are output as ES2015.
 
 ### [CoffeeScript 2](https://github.com/coffeescript6/discuss/projects/1)
 
-New ES2015+ features that cannot be added without causing breaking changes, like classes, [should be implemented on a `2` branch](https://github.com/coffeescript6/discuss/issues/36) for a future CoffeeScript 2.0.0 release. This new release will break backward compatibility, but as minimally as possible. Also in 2.0.0, we will modernize the output of as many features as possible and remove as many shims and polyfills as possible. CoffeeScript 2.0.0 will go through several rounds of alpha releases like 2.0.0-alpha1, 2.0.0-alpha2 etc. so that we can add features gradually and avoid committing to a final set of breaking changes before we’re ready.
+New ES2015+ features that cannot be added without causing breaking changes, like classes, [are implemented on a `2` branch](https://github.com/coffeescript6/discuss/issues/36) for a future CoffeeScript 2.0.0 release. This new release will break backward compatibility, but as minimally as possible. Also in 2.0.0, we will modernize the output of as many features as possible and remove as many shims and polyfills as possible. CoffeeScript 2.0.0 will go through several rounds of alpha releases like 2.0.0-alpha1, 2.0.0-alpha2 etc. so that we can add features gradually and avoid committing to a final set of breaking changes before we’re ready. You can also read [draft documentation for CoffeeScript 2](https://rawgit.com/GeoffreyBooth/coffeescript/2-docs/docs/v2/index.html).
+
+## Implemented Features
+
+#### ~~Modules: `import` and `export` [(#7)](https://github.com/coffeescript6/discuss/issues/7)~~
+
+> CoffeeScript 1.x and 2
+
+[This has been merged](https://github.com/jashkenas/coffeescript/pull/4300) and released as part of CoffeeScript 1.11.
+
+#### ~~Classes: Extend ES Classes, Idiomatic Methods [(#22)](https://github.com/coffeescript6/discuss/issues/22)~~
+
+> CoffeeScript 2 only
+
+[This has been merged](https://github.com/jashkenas/coffeescript/pull/4354) into the `2` branch.
+
+#### ~~Tagged template literals [(#28)](https://github.com/coffeescript6/discuss/issues/28)~~
+
+> CoffeeScript 1.x and 2
+
+[This has been merged](https://github.com/jashkenas/coffeescript/pull/4352) and released as part of CoffeeScript 1.12.
+
+#### ~~`async`/`await` [(#10)](https://github.com/coffeescript6/discuss/issues/10)~~
+
+> CoffeeScript 2
+
+[This has been merged](https://github.com/jashkenas/coffeescript/pull/3757) into the `2` branch.
+
+#### ~~Backticked blocks [(#42)](https://github.com/coffeescript6/discuss/issues/42)~~
+
+> CoffeeScript 1.x and 2
+
+[This has been merged](https://github.com/jashkenas/coffeescript/pull/4357) and released as part of CoffeeScript 1.12.
+
+#### ~~Template literals [(#41)](https://github.com/coffeescript6/discuss/issues/41)~~
+
+> CoffeeScript 2 only
+
+[This has been merged](https://github.com/jashkenas/coffeescript/pull/4365) into the `2` branch.
+
+#### ~~Fat arrows `=>` output as `=>` [(#8)](https://github.com/coffeescript6/discuss/issues/8)~~
+
+> CoffeeScript 2 only
+
+[This has been merged](https://github.com/jashkenas/coffeescript/pull/4311) into the `2` branch.
+
+#### ~~`for … of` [(#11)](https://github.com/coffeescript6/discuss/issues/11)~~
+
+> CoffeeScript 1.x and 2
+
+[This has been merged](https://github.com/jashkenas/coffeescript/pull/4306) and released as part of CoffeeScript 1.12.
+
+## Features to Implement
+
+#### Classes: Idiomatic `super` [(#22)](https://github.com/coffeescript6/discuss/issues/22)
+
+> CoffeeScript 2 only
+
+CoffeeScript’s `super` should always be compiled to ES2015’s `super`. This is in progress at [jashkenas/coffeescript #4424](https://github.com/jashkenas/coffeescript/pull/4424).
+
+#### Classes: `static`, `get` and `set` keywords [(#17)](https://github.com/coffeescript6/discuss/issues/17)
+
+> CoffeeScript 2 only
+
+Classes should support getters and setters [(#17)](https://github.com/coffeescript6/discuss/issues/17) and the `static` keyword.
+
+#### Destructuring assignment [(#18)](https://github.com/coffeescript6/discuss/issues/18)
+
+> CoffeeScript 2 only
+
+## Not in Scope
+
+These are other features that have been discussed, but the consensus at the moment is that no action should be taken to implement them:
+
+#### Block assignment `let` and `const` assignment operators [(#31)](https://github.com/coffeescript6/discuss/issues/31) or [(#35)](https://github.com/coffeescript6/discuss/issues/35)
+
+#### Inferred `let` assignment [(#1)](https://github.com/coffeescript6/discuss/issues/1)
+
+#### Decorators [(#9)](https://github.com/coffeescript6/discuss/issues/9)
+
+#### Type annotations [(#12)](https://github.com/coffeescript6/discuss/issues/12)
 
 ## Open Questions
 
