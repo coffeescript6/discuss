@@ -121,9 +121,11 @@ CoffeeScript’s `super` should always be compiled to ES2015’s `super`. This i
 
 Classes should support getters and setters [(#17)](https://github.com/coffeescript6/discuss/issues/17) and the `static` keyword.
 
-#### Destructuring assignment [(#18)](https://github.com/coffeescript6/discuss/issues/18)
+#### Destructuring: Idiomatic output [(#69)](https://github.com/coffeescript6/discuss/issues/69)
 
 > CoffeeScript 2 only
+
+CoffeeScript 1.x already supports destructuring; this task would be to change CoffeeScript’s output from ES3 plain variable assignment into ES2015 destructuring syntax.
 
 ## Not in Scope
 
