@@ -59,49 +59,49 @@ New ES2015+ features that cannot be added without causing breaking changes, like
 
 ## Implemented Features
 
-#### ~~Modules: `import` and `export` [(#7)](https://github.com/coffeescript6/discuss/issues/7)~~
+#### Modules: `import` and `export` [(#7)](https://github.com/coffeescript6/discuss/issues/7)
 
 > CoffeeScript 1.x and 2
 
 [This has been merged](https://github.com/jashkenas/coffeescript/pull/4300) and released as part of CoffeeScript 1.11.
 
-#### ~~Classes: Extend ES Classes, Idiomatic Methods [(#22)](https://github.com/coffeescript6/discuss/issues/22)~~
+#### Classes: Extend ES Classes, Idiomatic Methods [(#22)](https://github.com/coffeescript6/discuss/issues/22)
 
 > CoffeeScript 2 only
 
 [This has been merged](https://github.com/jashkenas/coffeescript/pull/4354) into the `2` branch.
 
-#### ~~Tagged template literals [(#28)](https://github.com/coffeescript6/discuss/issues/28)~~
+#### Tagged template literals [(#28)](https://github.com/coffeescript6/discuss/issues/28)
 
 > CoffeeScript 1.x and 2
 
 [This has been merged](https://github.com/jashkenas/coffeescript/pull/4352) and released as part of CoffeeScript 1.12.
 
-#### ~~`async`/`await` [(#10)](https://github.com/coffeescript6/discuss/issues/10)~~
+#### `async`/`await` [(#10)](https://github.com/coffeescript6/discuss/issues/10)
 
 > CoffeeScript 2
 
 [This has been merged](https://github.com/jashkenas/coffeescript/pull/3757) into the `2` branch.
 
-#### ~~Backticked blocks [(#42)](https://github.com/coffeescript6/discuss/issues/42)~~
+#### Backticked blocks [(#42)](https://github.com/coffeescript6/discuss/issues/42)
 
 > CoffeeScript 1.x and 2
 
 [This has been merged](https://github.com/jashkenas/coffeescript/pull/4357) and released as part of CoffeeScript 1.12.
 
-#### ~~Template literals [(#41)](https://github.com/coffeescript6/discuss/issues/41)~~
+#### Template literals [(#41)](https://github.com/coffeescript6/discuss/issues/41)
 
 > CoffeeScript 2 only
 
 [This has been merged](https://github.com/jashkenas/coffeescript/pull/4365) into the `2` branch.
 
-#### ~~Fat arrows `=>` output as `=>` [(#8)](https://github.com/coffeescript6/discuss/issues/8)~~
+#### Fat arrows `=>` output as `=>` [(#8)](https://github.com/coffeescript6/discuss/issues/8)
 
 > CoffeeScript 2 only
 
 [This has been merged](https://github.com/jashkenas/coffeescript/pull/4311) into the `2` branch.
 
-#### ~~`for … of` [(#11)](https://github.com/coffeescript6/discuss/issues/11)~~
+#### `for … of` [(#11)](https://github.com/coffeescript6/discuss/issues/11)
 
 > CoffeeScript 1.x and 2
 
