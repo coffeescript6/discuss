@@ -55,7 +55,7 @@ New ES2015+ features that can be opt-in by using them and that don’t break bac
 
 ### [CoffeeScript 2](https://github.com/coffeescript6/discuss/projects/1)
 
-New ES2015+ features that cannot be added without causing breaking changes, like classes, [are implemented on a `2` branch](https://github.com/coffeescript6/discuss/issues/36) for a future CoffeeScript 2.0.0 release. This new release will break backward compatibility, but as minimally as possible. Also in 2.0.0, we will modernize the output of as many features as possible and remove as many shims and polyfills as possible. CoffeeScript 2.0.0 will go through several rounds of alpha releases like 2.0.0-alpha1, 2.0.0-alpha2 etc. so that we can add features gradually and avoid committing to a final set of breaking changes before we’re ready. You can also read [draft documentation for CoffeeScript 2](https://rawgit.com/GeoffreyBooth/coffeescript/2-docs/docs/v2/index.html).
+New ES2015+ features that cannot be added without causing breaking changes, like classes, [are implemented on a `2` branch](https://github.com/coffeescript6/discuss/issues/36) for a future CoffeeScript 2.0.0 release. This new release will break backward compatibility, but as minimally as possible. Also in 2.0.0, we will modernize the output of as many features as possible and remove as many shims and polyfills as possible. CoffeeScript 2.0.0 will go through several rounds of alpha releases like 2.0.0-alpha1, 2.0.0-alpha2 etc. so that we can add features gradually and avoid committing to a final set of breaking changes before we’re ready. You can also read [draft documentation for CoffeeScript 2](https://rawgit.com/jashkenas/coffeescript/2/docs/v2/index.html).
 
 ## Implemented Features
 
