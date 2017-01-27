@@ -115,11 +115,11 @@ New ES2015+ features that cannot be added without causing breaking changes, like
 
 CoffeeScript’s `super` should always be compiled to ES2015’s `super`. This is in progress at [jashkenas/coffeescript #4424](https://github.com/jashkenas/coffeescript/pull/4424).
 
-#### Classes: `static`, `get` and `set` keywords [(#17)](https://github.com/coffeescript6/discuss/issues/17)
+#### Classes: `get`, `set` and `static` keywords [(#17)](https://github.com/coffeescript6/discuss/issues/17) [(#70)](https://github.com/coffeescript6/discuss/issues/70)
 
 > CoffeeScript 2 only
 
-Classes should support getters and setters [(#17)](https://github.com/coffeescript6/discuss/issues/17) and the `static` keyword.
+Classes should support getters and setters [(#17)](https://github.com/coffeescript6/discuss/issues/17) and the `static` keyword [(#70)](https://github.com/coffeescript6/discuss/issues/70).
 
 #### Destructuring: Idiomatic output [(#69)](https://github.com/coffeescript6/discuss/issues/69)
 
