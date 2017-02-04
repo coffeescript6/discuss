@@ -65,11 +65,11 @@ New ES2015+ features that cannot be added without causing breaking changes, like
 
 [This has been merged](https://github.com/jashkenas/coffeescript/pull/4300) and released as part of CoffeeScript 1.11.
 
-#### Classes: Extend ES Classes, Idiomatic Methods [(#22)](https://github.com/coffeescript6/discuss/issues/22)
+#### Classes: Extend ES Classes, Idiomatic Methods, Idiomatic `super` [(#22)](https://github.com/coffeescript6/discuss/issues/22)
 
 > CoffeeScript 2 only
 
-[This has been merged](https://github.com/jashkenas/coffeescript/pull/4354) into the `2` branch.
+[This has been merged](https://github.com/jashkenas/coffeescript/pull/4354) and [merged](https://github.com/jashkenas/coffeescript/pull/4424) into the `2` branch.
 
 #### Tagged template literals [(#28)](https://github.com/coffeescript6/discuss/issues/28)
 
@@ -108,12 +108,6 @@ New ES2015+ features that cannot be added without causing breaking changes, like
 [This has been merged](https://github.com/jashkenas/coffeescript/pull/4306) and released as part of CoffeeScript 1.12.
 
 ## Features to Implement
-
-#### Classes: Idiomatic `super` [(#22)](https://github.com/coffeescript6/discuss/issues/22)
-
-> CoffeeScript 2 only
-
-CoffeeScript’s `super` should always be compiled to ES2015’s `super`. This is in progress at [jashkenas/coffeescript #4424](https://github.com/jashkenas/coffeescript/pull/4424).
 
 #### Classes: `get`, `set` and `static` keywords [(#17)](https://github.com/coffeescript6/discuss/issues/17) [(#70)](https://github.com/coffeescript6/discuss/issues/70)
 
