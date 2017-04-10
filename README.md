@@ -107,19 +107,25 @@ New ES2015+ features that cannot be added without causing breaking changes, like
 
 [This has been merged](https://github.com/jashkenas/coffeescript/pull/4306) and released as part of CoffeeScript 1.12.
 
-## Features to Implement
-
-#### Classes: `get`, `set` and `static` keywords [(#17)](https://github.com/coffeescript6/discuss/issues/17) [(#70)](https://github.com/coffeescript6/discuss/issues/70)
+#### `get` and `set` keywords throw errors [(#17)](https://github.com/coffeescript6/discuss/issues/17)
 
 > CoffeeScript 2 only
 
-Classes should support getters and setters [(#17)](https://github.com/coffeescript6/discuss/issues/17) and the `static` keyword [(#70)](https://github.com/coffeescript6/discuss/issues/70).
+[This has been merged](https://github.com/jashkenas/coffeescript/pull/4484) into the `2` branch.
 
 #### Destructuring: Idiomatic output [(#69)](https://github.com/coffeescript6/discuss/issues/69)
 
 > CoffeeScript 2 only
 
-CoffeeScript 1.x already supports destructuring; this task would be to change CoffeeScript’s output from ES3 plain variable assignment into ES2015 destructuring syntax.
+[This has been merged](https://github.com/jashkenas/coffeescript/pull/4478) into the `2` branch.
+
+## Features to Implement
+
+#### Destructuring: Object spreads
+
+> CoffeeScript 2 only
+
+[This PR](https://github.com/jashkenas/coffeescript/pull/4493) aims to support splats in destructured objects.
 
 ## Not in Scope
 
