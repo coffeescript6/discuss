@@ -119,13 +119,15 @@ New ES2015+ features that cannot be added without causing breaking changes, like
 
 [This has been merged](https://github.com/jashkenas/coffeescript/pull/4478) into the `2` branch.
 
-## Features to Implement
-
 #### Destructuring: Object spreads
 
 > CoffeeScript 2 only
 
 [This PR](https://github.com/jashkenas/coffeescript/pull/4493) aims to support splats in destructured objects.
+
+## Features to Implement
+
+All features that were goals for CoffeeScript 2 have been implemented! As soon as we’re done testing for bugs, 2.0.0 will be released.
 
 ## Not in Scope
 
