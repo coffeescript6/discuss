@@ -123,7 +123,7 @@ New ES2015+ features that cannot be added without causing breaking changes, like
 
 > CoffeeScript 2 only
 
-[This PR](https://github.com/jashkenas/coffeescript/pull/4493) aims to support splats in destructured objects.
+[This has been merged](https://github.com/jashkenas/coffeescript/pull/4493) into the `2` branch.
 
 ## Features to Implement
 
